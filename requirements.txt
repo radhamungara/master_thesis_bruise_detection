@@ -1,0 +1,11 @@
+ultralytics
+pycocotools
+scikit-learn
+matplotlib
+pandas
+pyyaml
+numpy
+opencv-python
+optuna
+wandb
+streamlit
