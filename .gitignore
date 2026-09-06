@@ -1,0 +1,84 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local IDE/editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and local config
+.env
+.env.*
+*.local
+
+# Temporary working folders
+.codex_tmp_*/
+tmp/
+temp/
+
+# ML datasets, model weights, and exported artifacts
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.h5
+*.pkl
+*.joblib
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Generated debug images and trial snapshots
+debug_*.jpg
+debug_*.png
+optuna_trial_*_*.jpg
+optuna_trial_*_*.png
+
+# Generated experiment outputs and reports
+artifacts/
+experiments/
+latest_training_result/
+best_fold_validation_metrics/
+cross_validation_graphs_latest/
+cross_validation_graph_images/
+dataset3_vs_dataset4_comparison/
+Dataset4_*result*/
+Dataset4_*reports*/
+Dataset4_*runs*/
+downloaded_*/
+rfdetr_*result*/
+rfdetr_*results*/
+rfdetr_*reports*/
+rfdetr_*graphs*/
+rfdetr_*outputs*/
+rfdetr_*fold*/
+
+# Generated result summaries
+cross_validation_results*.csv
+class_failure_summary*.csv
+source_cluster_failure_summary*.csv
+fold_info.csv
+cluster_distribution_sorted.png
+
+# Stray local scratch file
+PY
