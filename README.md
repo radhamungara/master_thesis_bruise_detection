@@ -165,35 +165,8 @@ The main training pipeline is executed through:
 python run_pipeline.py
 ```
 
-Default settings:
-
-```text
-dataset root: R:\Dataset4
-output root: artifacts
-base model: rtdetr-l.pt
-cross-validation folds: 5
-Optuna trials: 5
-hyperparameter epochs: 5
-final training epochs: 10
-```
-
-Run full training:
-
 ```bash
 python run_pipeline.py --dataset-root "R:\Dataset4" --output-root artifacts
-```
-
-Run with custom settings:
-
-```bash
-python run_pipeline.py ^
-  --dataset-root "R:\Dataset4" ^
-  --output-root artifacts ^
-  --base-model rtdetr-l.pt ^
-  --n-splits 5 ^
-  --optuna-trials 5 ^
-  --hyperopt-epochs 5 ^
-  --final-epochs 10
 ```
 
 Skip Optuna when saved best hyperparameters already exist:
@@ -280,23 +253,6 @@ After training, the pipeline evaluates each fold and saves metrics, plots, and i
 
 Main result files:
 
-```text
-artifacts/reports/cross_validation_results.csv
-artifacts/reports/cross_validation_summary.csv
-artifacts/reports/cross_validation_metric_summary.png
-artifacts/reports/cross_validation_best_epoch.png
-```
-
-Fold-level analysis is saved under:
-
-```text
-artifacts/reports/fold_1_analysis/
-artifacts/reports/fold_2_analysis/
-artifacts/reports/fold_3_analysis/
-artifacts/reports/fold_4_analysis/
-artifacts/reports/fold_5_analysis/
-```
-
 Each fold analysis may include:
 
 - Detection summary JSON
@@ -316,22 +272,8 @@ artifacts/Final Result/
 
 ---
 
-## 10. Utility Scripts
 
-| Script | Purpose |
-|--------|---------|
-| `scripts/audit_yolo_labels.py` | Checks YOLO label files for formatting or annotation issues |
-| `scripts/create_balanced_cluster_dataset.py` | Creates a balanced dataset using cluster information |
-| `scripts/generate_rtdetr_localisation_failure_examples.py` | Generates localization failure examples |
-| `scripts/generate_rtdetr_balanced_localisation_failure_examples.py` | Generates balanced localization failure examples |
-| `scripts/generate_rtdetr_bruise_posteval_cluster_failure_plot.py` | Creates post-evaluation cluster failure plots |
-| `scripts/replicate_non_bruise_images.py` | Replicates non-bruise images for dataset balancing |
-| `scripts/replicate_non_bruises.py` | Utility for non-bruise replication workflows |
-| `scripts/rfdetr_posteval_kmeans.py` | Runs KMeans-based post-evaluation analysis |
-
----
-
-## 11. Files to Commit to GitLab
+## 9. Files to Commit to GitLab
 
 Commit:
 
